@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.22.2)
+set(CMAKE_CXX_STANDARD 11)
+project(lib_keyinteceptor)
+
+add_library(libkeyinterceptor src/keyinterceptor.hpp src/keyinterceptor.cpp)
+
+add_executable(keyinterceptor WIN32 src/demo.cpp)
+target_link_libraries(keyinterceptor libkeyinterceptor)
